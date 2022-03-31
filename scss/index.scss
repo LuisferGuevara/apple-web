@@ -16,8 +16,12 @@ img {
         max-width: 980px;
       }
 }
-
-
+sup {
+    z-index: -1;
+}
+.uno {
+    background-color: #000000;
+}
 .header-nav__list{
  width: 100%;
  @media screen and (min-width:731px){
@@ -32,6 +36,7 @@ img {
      left:0; 
      display: flex;
      justify-content: center;
+     z-index: 1;
  }
     ul{ display: flex;
         justify-content: space-between;
@@ -77,6 +82,7 @@ img {
     }
     .header-nav__btn:checked ~ .header-nav__list {
     top:40px;
+    z-index: 9999;
     }
 
     .header-nav__menu {

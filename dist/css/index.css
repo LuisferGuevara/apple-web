@@ -9,6 +9,8 @@ img {
 }
 
 .header-nav {
+  max-width: 980px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,28 +20,12 @@ img {
   position: relative;
 }
 
-@media screen and (min-width: 731px) {
-  .header-nav {
-    max-width: 980px;
-  }
-}
-
-sup {
-  z-index: -1;
-}
-
-.uno {
-  background-color: #000000;
+.header-nav a {
+  color: gray;
 }
 
 .header-nav__list {
   width: 100%;
-}
-
-@media screen and (min-width: 731px) {
-  .header-nav__list {
-    background-color: gray;
-  }
 }
 
 @media screen and (max-width: 730px) {
@@ -60,15 +46,6 @@ sup {
   }
 }
 
-.header-nav__list ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 @media screen and (max-width: 730px) {
   .header-nav__list ul {
     -webkit-box-orient: vertical;
@@ -86,7 +63,7 @@ sup {
 
 @media screen and (min-width: 731px) {
   .header-nav__list ul {
-    background-color: #ffffff;
+    width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -118,6 +95,40 @@ sup {
   }
 }
 
+sup {
+  z-index: 0;
+}
+
+.uno {
+  background-color: #000000;
+}
+
+.billboard {
+  max-width: 980px;
+}
+
+.billboard-card {
+  min-height: 500px;
+  height: 500px;
+  max-height: 500px;
+}
+
+.foto {
+  width: 3300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .coche {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 49% 49%;
+        grid-template-columns: 49% 49%;
+  }
+}
+
 @media screen and (max-width: 730px) {
   .header-nav {
     height: 45px;
@@ -129,6 +140,8 @@ sup {
   .header-nav__btn:checked ~ .header-nav__list {
     top: 40px;
     z-index: 9999;
+    -webkit-transition: visibility 0s linear 1s;
+    transition: visibility 0s linear 1s;
   }
   .header-nav__menu {
     width: 20px;

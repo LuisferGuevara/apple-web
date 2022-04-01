@@ -8,26 +8,20 @@ img {
     object-fit: cover;
     width: 100%;
 }
+
 .header-nav {
+    max-width: 980px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     position: relative;
-    @media screen and (min-width:731px) {
-        max-width: 980px;
-      }
-}
-sup {
-    z-index: -1;
-}
-.uno {
-    background-color: #000000;
+     a {
+         color: gray;
+     }
 }
 .header-nav__list{
- width: 100%;
- @media screen and (min-width:731px){
-     background-color: gray;
- }
- @media screen and (max-width:730px) {
+    width: 100%; 
+    @media screen and (max-width:730px) {
      color: gray;
      height: 100vh;
      width: 100vw;
@@ -37,10 +31,9 @@ sup {
      display: flex;
      justify-content: center;
      z-index: 1;
- }
-    ul{ display: flex;
-        justify-content: space-between;
-     
+    }
+
+    ul {
         @media screen and (max-width:730px) {
             flex-direction: column;
             height: 50vh;
@@ -49,30 +42,63 @@ sup {
             display: flex;
         }
         @media screen and (min-width:731px) {
-            background-color: #ffffff;
+      
+            width: 100%;
             justify-content: space-between;
         }
 
-        li{ display: inline;
-            @media screen and (max-width:730px){ display: block;
+        li {
+         display: inline;
+        
+         @media screen and (max-width:730px){
+            display: block;
             width: 100%;
             border-bottom:1px solid  gray;
             padding-bottom: 2%;
             }
+
             a {
-             text-decoration: none;
-             color: gray;
-             @media screen and (max-width:730px) {
+              text-decoration: none;
+              color: gray;
+              @media screen and (max-width:730px) {
                  color: gray;
                  width: 100%;
-
-             }
+                }
             }
 
         }
     }
 }
 
+
+sup {
+    z-index: 0;
+}
+.uno {
+    background-color: #000000;
+}
+.billboard {
+    max-width: 980px;
+}
+.billboard-card {
+    min-height: 500px;
+    height: 500px;
+    max-height: 500px;
+}
+
+.foto{
+    width: 3300px;
+    object-fit: cover;
+    height: 100%;
+}
+
+.coche {
+    @media screen and (min-width:768px) {
+        
+        display: grid;
+        grid-template-columns: 49% 49%;
+    }
+}
 
 @media screen and (max-width:730px) {
     .header-nav {
@@ -83,6 +109,7 @@ sup {
     .header-nav__btn:checked ~ .header-nav__list {
     top:40px;
     z-index: 9999;
+    transition: visibility 0s linear 1s;
     }
 
     .header-nav__menu {

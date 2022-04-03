@@ -1,14 +1,22 @@
-
-$colorBlack: #1d1d1f;
-$colorWhite: #ffffff;
+// BASE
 body {
     font-family: "Text","Helvetica Neue","Helvetica","Arial",sans-serif;
+a {text-decoration: none;}
 }
 img {
     object-fit: cover;
     width: 100%;
 }
 
+.product-info, .footer{
+    max-width: 980px;
+   
+}
+
+//HEADER
+.header {
+    z-index: 999;
+}
 .header-nav {
     max-width: 980px;
     margin: 0 auto;
@@ -69,37 +77,6 @@ img {
         }
     }
 }
-
-
-sup {
-    z-index: 0;
-}
-.uno {
-    background-color: #000000;
-}
-.billboard {
-    max-width: 980px;
-}
-.billboard-card {
-    min-height: 500px;
-    height: 500px;
-    max-height: 500px;
-}
-
-.foto{
-    width: 3300px;
-    object-fit: cover;
-    height: 100%;
-}
-
-.coche {
-    @media screen and (min-width:768px) {
-        
-        display: grid;
-        grid-template-columns: 49% 49%;
-    }
-}
-
 @media screen and (max-width:730px) {
     .header-nav {
     height: 45px;
@@ -158,7 +135,7 @@ sup {
       ~ .header-nav__menu
       span:nth-last-child(1) {
       opacity: 2;
-      transform: rotate(-46deg) scale(1, 1) ;
+      transform: rotate(-45deg) scale(1, 1) ;
     
     }
     .header-nav__btn:checked
@@ -171,27 +148,336 @@ sup {
         background-color: transparent;
         border:none;
     }
-    .billboard-card {
-        height: 600px;
-        width: 100%;
-        @media screen and (min-width:731px) {
-            width: 50%;
-            
-        }
-    }
+  
 
 }
-.info-text {
-    @media screen and (min-width:731px) {
-        max-width: 980px;
-        
-    }
-}
-
         
 @media screen and (min-width:731px) {
     .header-nav__search {
         display: none;
     }
     
+}
+
+.module {
+    max-width: 980px;
+}
+
+// BILLBOARD
+.billboard {
+    max-width: 980px;
+    height: 600px;
+    width: 100%;
+}
+.billboard-card {
+    height: 600px;
+    width: 100%;
+    margin-left: 0;
+}
+
+.billboard-card__heading-box{
+    z-index:1;
+}
+.billboard-card__heading-box2{
+    position: absolute;
+    left: 20%;
+    z-index:1;
+    @media screen and (min-width:980px) {
+      right: 20%;
+    }
+}
+.billboard-card__heading-box3 {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+ 
+}
+.billboard-card__bg-1 {
+    bottom: 0;
+    height: 80%;
+    width: 100%;
+    
+    background-image: url(/images/iphon-black-big.png);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    @media screen and (max-width:730px){
+        background-image: url(/images/iphone-se-small.jpeg);
+        background-position:bottom;
+        height: 50%;
+        
+    }
+ 
+
+}
+.billboard-card__bg-2 {
+    background-image: url(/images/iphone-11.jpg);
+    background-position:initial;
+    background-size: cover;
+    height: 50%;
+    bottom: 0;
+    @media screen and (max-width:730px){
+        height: 60%;
+    }
+    @media screen and (min-width:731px){
+        background-image: url(/images/apple11-sm.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        height: 60%;
+    }
+}
+.billboard-card__bg-3 {
+    background-image: url(/images/iphooone.jpeg);
+    background-position:initial;
+    background-size: cover;
+    height: 50%;
+    bottom: 0;
+    @media screen and (max-width:730px){
+        height: 60%;
+    }
+    @media screen and (min-width:731px){
+        background-image: url(/images/ggggg.png);
+        background-size: cover;
+        background-position: top;
+        height: 65%;
+    }
+}
+.billboard-grid {
+    display: grid;
+    width: 100%;
+ 
+    @media screen and (min-width:768px) {
+        justify-content: center;
+     grid-template-columns: 48.5% 48.5%;
+     gap:10px;
+    
+    }
+}
+.billboard-card__bg-4 {
+    background-image: url(/images/watch.jpg);
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height:53%;
+    z-index: 0;
+    @media screen and (max-width:730px) {
+       height: 60%;
+        
+    }
+    @media screen and (min-width:731px) {
+        background-size: cover;
+        
+    }
+}
+.billboard-card__bg-5 {
+    background-image: url(/images/macbook.jpeg);
+    bottom: 0;
+    width: 100%;
+    @media screen and (max-width:730px) {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+       height: 72%;
+        
+    }
+    @media screen and (min-width:731px) {
+        background-size:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 60%;
+        
+    }
+}
+.billboard-card__bg-6 {
+    background-image: url(/images/jacobo.jpeg);
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    @media screen and (max-width:730px) {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 98%;
+        width: 100vw;
+        z-index: 0;
+    }
+    @media screen and (min-width:731px) {
+        background-size:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+
+        
+    }
+}
+.billboard-card__bg-7{
+    background-image: url(/images/Apple_logo_grey.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 35%;
+    width: 50%;
+    top:40%;
+    left:25%
+}
+.billboard-card__bg-8{
+    background-image: url(/images/A-App-Store-Logo-Transparent.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    height: 35%;
+    width: 100%;
+    top:40%;
+    left:0
+}
+.billboard-card__bg-9{
+    background-image: url(/images/smilling.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+.billboard-card__bg-10 img{
+  height: 20px;
+  width: 100px;  
+}
+
+.special-text {
+    background: -webkit-linear-gradient(yellow, tomato);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+//   FOOOTER
+
+.footer-01__list {
+  
+    @media screen and (max-width:730px) {
+        padding-top: 4%;
+        h3 {
+            padding-bottom: 2%;
+            border-bottom: 1px solid lightgray;
+           
+        }
+        .footer-01__sub-list {
+            display:none;
+        }
+
+        .footer-btn1:checked ~ .footer-01__sub-list1{
+            display: block;
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+        .footer-btn2:checked ~ .footer-01__sub-list2{
+            display: block;
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+        .footer-btn3:checked ~ .footer-01__sub-list3{
+            display: block;
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+        .footer-btn4:checked ~ .footer-01__sub-list4{
+            display: block;
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+        .footer-btn5:checked ~ .footer-01__sub-list5{
+            display: block;
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+        .footer-btn6:checked ~ .footer-01__sub-list6{
+            display: block;
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+        .footer-btn7:checked ~ .footer-01__sub-list7{
+            display: block;
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+        .footer-btn8:checked ~ .footer-01__sub-list8{
+            display: block;
+            padding-bottom: 5%;
+            margin-left: 5%;
+        }
+        .footer-btn9:checked ~ .footer-01__sub-list9{
+            display: block;
+        
+            margin-left: 5%;
+        }
+        
+       
+    }
+    @media  screen and (min-width:731px) {
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+       
+        li {
+            width: 98%;
+            
+            .footer-01__sub-list  {
+                li{
+                     margin-bottom: 3%;
+                }
+            }
+            i {
+                display: none
+            }
+        }
+    }
+}
+.footer-02 {
+    font-size: 15px;
+}
+.legal {
+    @media screen and (max-width:730px) {
+    flex-flow: column-reverse;
+ 
+    }
+    @media screen and (min-width:731px) {
+        border-top: 1px solid lightgray;
+        justify-content: space-between;
+        padding-top: 2%;
+        
+    }
+}
+.footer-02__list {
+    li {
+        padding-right: 2%;
+        @media screen and (max-width:730px) {
+            padding-bottom: 2%;
+            
+        }
+       
+        a { height: 80%;
+
+            padding: 0;        
+            @media screen and (max-width:962px) {
+                border-right: 1px solid gray;
+               
+            }
+        }
+    }
+    .last {
+        @media screen and (max-width:958px) {
+         border: none;
+            
+        }
+
+    }
+
 }

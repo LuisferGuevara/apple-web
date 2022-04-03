@@ -1,0 +1,194 @@
+.billboard {
+    max-width: 980px;
+    height: 600px;
+    width: 100%;
+}
+.billboard-card {
+    height: 600px;
+    width: 100%;
+    margin-left: 0;
+}
+
+.billboard-card__heading-box{
+    z-index:1;
+}
+.billboard-card__heading-box2{
+    position: absolute;
+    left: 20%;
+    z-index:1;
+    @media screen and (min-width:980px) {
+      right: 20%;
+    }
+}
+.billboard-card__heading-box3 {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+ 
+}
+.billboard-card__bg-1 {
+    bottom: 0;
+    height: 80%;
+    width: 100%;
+    
+    background-image: url(/images/iphon-black-big.png);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    @media screen and (max-width:730px){
+        background-image: url(/images/iphone-se-small.jpeg);
+        background-position:bottom;
+        height: 50%;
+        
+    }
+ 
+
+}
+.billboard-card__bg-2 {
+    background-image: url(/images/iphone-11.jpg);
+    background-position:initial;
+    background-size: cover;
+    height: 50%;
+    bottom: 0;
+    @media screen and (max-width:730px){
+        height: 60%;
+    }
+    @media screen and (min-width:731px){
+        background-image: url(/images/apple11-sm.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        height: 60%;
+    }
+}
+.billboard-card__bg-3 {
+    background-image: url(/images/iphooone.jpeg);
+    background-position:initial;
+    background-size: cover;
+    height: 50%;
+    bottom: 0;
+    @media screen and (max-width:730px){
+        height: 60%;
+    }
+    @media screen and (min-width:731px){
+        background-image: url(/images/ggggg.png);
+        background-size: cover;
+        background-position: top;
+        height: 65%;
+    }
+}
+.billboard-grid {
+    display: grid;
+    width: 100%;
+ 
+    @media screen and (min-width:768px) {
+        justify-content: center;
+     grid-template-columns: 48.5% 48.5%;
+     gap:10px;
+    
+    }
+}
+.billboard-card__bg-4 {
+    background-image: url(/images/watch.jpg);
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height:53%;
+    z-index: 0;
+    @media screen and (max-width:730px) {
+       height: 60%;
+        
+    }
+    @media screen and (min-width:731px) {
+        background-size: cover;
+        
+    }
+}
+.billboard-card__bg-5 {
+    background-image: url(/images/macbook.jpeg);
+    bottom: 0;
+    width: 100%;
+    @media screen and (max-width:730px) {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+       height: 72%;
+        
+    }
+    @media screen and (min-width:731px) {
+        background-size:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 60%;
+        
+    }
+}
+.billboard-card__bg-6 {
+    background-image: url(/images/jacobo.jpeg);
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    @media screen and (max-width:730px) {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 98%;
+        width: 100vw;
+        z-index: 0;
+    }
+    @media screen and (min-width:731px) {
+        background-size:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+
+        
+    }
+}
+.billboard-card__bg-7{
+    background-image: url(/images/Apple_logo_grey.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 35%;
+    width: 50%;
+    top:40%;
+    left:25%
+}
+.billboard-card__bg-8{
+    background-image: url(/images/A-App-Store-Logo-Transparent.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    height: 35%;
+    width: 100%;
+    top:40%;
+    left:0
+}
+.billboard-card__bg-9{
+    background-image: url(/images/smilling.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+    z-index: 0;
+}
+.billboard-card__bg-10 img{
+  height: 20px;
+  width: 100px;  
+}
+
+.special-text {
+    background: -webkit-linear-gradient(yellow, tomato);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

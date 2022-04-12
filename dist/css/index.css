@@ -267,6 +267,7 @@ span:nth-last-child(2) {
 
 .billboard-card__heading-box2 {
   position: absolute;
+  width: 100%;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -561,7 +562,8 @@ span:nth-last-child(2) {
   .footer-01__list {
     display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    -ms-grid-columns: (20%)[5];
+        grid-template-columns: repeat(5, 20%);
   }
   .footer-01__list li {
     width: 98%;
